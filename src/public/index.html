@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous"> 
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand mx-auto" href="/">Javascript Chat UwU</a>
+    </nav>
+
+    <div class="card col-md-4 mt-5 mx-auto" id="nickWrap">
+        <div class="card-header">
+            <h3>Enter you Username:</h3>
+        </div>
+        <p id="nickError"></p>
+        <div class="card-body">
+            <form id="nickForm">
+                <input type="text" id="nickname" class="form-control">
+                <button type="submit" class="btn btn-dark btn-block mt-2">
+                        <i class="fas fa-comments"></i> Join
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container" id="contentWrap">
+        <div class="row">
+                <div class="col-md-6 offset-md-1 mt-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Let's Chat</h4>
+                            </div>
+                            <div id="chat" class="card-body"></div>
+                            <form id="message-form" class="card-footer">
+                                <div class="input-group">
+                                    <input type="text" id="message" class="form-control">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-dark">
+                                            <i class="fas fa-location-arrow"></i> Send
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                <div class="col-md-3 mt-4">
+                        <div class="card">
+                                <div class="card-header">
+                                    <h3>Connected</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div id="usernames"></div>
+                                </div>
+                        </div>
+                </div>
+        </div> 
+    </div>
+
+    <script  src="https://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="  crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js" charset="UTF-8"></script>
+    <script src="/js/main.js" charset="UTF-8"></script>
+</body>
+
+</html>
