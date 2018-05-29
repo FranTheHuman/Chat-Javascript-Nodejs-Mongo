@@ -12,7 +12,7 @@ const io = soketIo.listen(server) //gracias a este io voy a poder enviar y recib
 
 const moongoose = require('mongoose')
 
-moongoose.connect('mongodb://localhost/chatDB')
+moongoose.connect('mongodb://lautaro:hamball8@ds139960.mlab.com:39960/chatdb')
     .then(db => console.log('Db is connected'))
     .catch(err => console.log(err))
 
